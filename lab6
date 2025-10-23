@@ -91,5 +91,5 @@ while True:
 
     if choice == "1": add_student(students)
 
-    elif choice == "2": print("Завершення роботи програми"); break
+    elif choice == "2": print(" Завершення роботи програми"); break
     else: print("Неправильний вибір\n")
