@@ -81,15 +81,28 @@ def add_student(students_list):
     })
     print(f"\nСтудента {name} додано до списку\n")
 
+#функція Кіпренко П.А.
+#виведення інформації про всіх студентів
+def display_all_students(students_list):
+    print("\nСписок студентів:")
+    for s in students_list:
+        print(f"\nПІБ: {s['full_name']}")
+        print(f"Група: {s['group_number']}")
+        print(f"Курс: {s['course']}")
+        print(f"Семестр: {s['semester']}")
+        print("Оцінки:")
+        for subject, grade in s["grades"].items():
+            print(f"    {subject}: {grade}")
 
 # Меню 
 while True:
     print("Меню")
     print("1. Додати студента")
-    print("2. Вийти")
+    print("2. Показати всіх студентів")
+    print("3. Вийти")
     choice = input("Оберіть дію: ").strip()
 
     if choice == "1": add_student(students)
-
-    elif choice == "2": print("Завершення роботи програми"); break
+    elif choice == "2": display_all_students(students)
+    elif choice == "3": print("Завершення роботи програми"); break
     else: print("Неправильний вибір\n")
